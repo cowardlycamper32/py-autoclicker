@@ -99,10 +99,19 @@ def clicker():
             ms.click(button=button)
         wait(delay)
     else:
-        kb.press(button)
-        wait(delay/2)
-        kb.release(button)
-        wait(delay/2)
+        if dbl:
+            kb.press(button)
+            wait(delay/4)
+            kb.release(button)
+            wait(delay/4)
+            kb.press(button)
+            wait(delay/4)
+            kb.release(button)
+            wait(delay/4)
+        else:
+            kb.press(button)
+            wait(delay/2)
+            kb.release(button)
 
 
 
